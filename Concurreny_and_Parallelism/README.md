@@ -1,5 +1,4 @@
 # Concurrency and Parallelism
-[Python Docs](https://docs.python.org/3/library/concurrent.futures.html)
 
 ## Contents
 
