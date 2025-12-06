@@ -1,6 +1,30 @@
 # Concurrency and Parallelism
 [Python Docs](https://docs.python.org/3/library/concurrent.futures.html)
 
+## Contents
+
+- [GIL (Global Interpreter Lock)](#gil-global-interpreter-lock)
+    - [What is the GIL?](#what-is-the-gil)
+    - [What does it mean?](#what-does-it-mean)
+    - [What does it affect?](#what-does-it-affect)
+- [Threads and Processes](#threads-and-processes)
+    - [Core Differences](#core-differences)
+        - [Process](#process)
+        - [Thread](#thread)
+    - [Real-World Analogies](#real-world-analogies)
+        - [Restaurant Kitchen (Threads vs Processes)](#restaurant-kitchen-threads-vs-processes)
+    - [Comparison Table](#comparison-table)
+    - [Important Consideration while choosing between Multi-threading and Multi-Processing](#important-consideration-while-choosing-between-multi-threading-and-multi-processing)
+    - [Decision Tree](#decision-tree)
+- [Python concurrent.futures](#python-concurrentfutures)
+    - [Executor Objects](#executor-objects)
+    - [Deadlock scenario](#deadlock-scenario)
+    - [ThreadPool Executor — Key points](#threadpool-executor-key-points)
+    - [ProcessPool Executor — Key points](#processpool-executor-key-points)
+- [Python multiprocessing module](#python-multiprocessing-module)
+    - [Why the Infinite Loop Happens (The "Spawn" Method)](#why-the-infinite-loop-happens-the-spawn-method)
+    - [How `if __name__ == "__main__"` solves this](#how-if-__name__-==-__main__-solves-this)
+
 Before diving into Concurrency and Parallelism in Python, let's first get some fundamentals clear.
 
 - GIL
